@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2957360398">
+    <data-source source="LOCAL" name="Rails TEDxUnilagVolunteerPage: development" uuid="751718de-6a3f-4008-b96a-88f0729912f0">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Onyekachy\Documents\workspace\rails workspace\TEDxUnilagVolunteerPage\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

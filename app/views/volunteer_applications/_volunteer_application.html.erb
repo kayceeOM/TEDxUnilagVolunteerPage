@@ -1,0 +1,11 @@
+<li class="application">
+  <h4 class="user-name"><%= volunteer_application.name %></h4>
+  <div class="user-email"><%= volunteer_application.email %></div>
+  <div class="user-department"><%= volunteer_application.course %></div>
+  <div class="user-year">Year <%= volunteer_application.year %></div>
+  <div class="user-activity"><%= volunteer_application.interest %></div>
+  <p class="user-reason"><%= volunteer_application.reason %></p>
+  <div id="<%= dom_id(volunteer_application) %>" >
+    <%= render :partial =>  'accept_revoke_form', locals: { volunteer_application: volunteer_application } %>
+  </div>
+</li>

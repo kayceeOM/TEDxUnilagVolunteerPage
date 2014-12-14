@@ -1,0 +1,46 @@
+<%= provide(:title, 'Volunteer') %>
+<body>
+<div class="header">
+  <div class="container">
+    <div class="brand">
+      <a href="http://tedxunilag.com"><img src="<%= image_path 'TEDx_logo.png' %>"></a>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="container">
+    <div class="title">
+      <h1>Welcome to our volunteer page.</h1>
+      <div class="subtitle">Apply as a volunteer to help put together the upcoming TEDx Unilag.</div>
+    </div>
+    <%= form_for @volunteer_application, html: { class: 'narrow'} do |f| %>
+        <% if @volunteer_application.errors.any? %>
+            <div id="error_explanation" class="alert alert-danger subtitle" style="color: #777; padding: 20px;">
+              <h4><%= pluralize(@volunteer_application.errors.count, 'thing') %> stopped us from getting your submission: </h4>
+
+              <ul>
+                <% @volunteer_application.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+      <%= f.text_field :name, class: 'form-control', placeholder: 'Full Name' %>
+      <%= f.text_field :email, class: 'form-control', placeholder: 'Email Address' %>
+      <%= f.text_field :course, class: 'form-control', placeholder: 'Department' %>
+      <%= f.select :year,['Year of study', 1, 2, 3, 4, 5], class: 'pull-left' %>
+      <%= f.select :interest, ['What would you like to do?','Graphic Design', 'Photography', 'Illustration', 'Videography', 'Animation', 'Logistics', 'Stage Management'] , class: 'pull-left' %>
+      <%= f.text_area :reason, class: 'form-control', placeholder: 'Tell us a bit about why you are applying' %>
+      <div>
+        <%= f.submit 'Apply', class: 'btn form-control'%>
+      </div>
+    <% end %>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <a class="subtitle small" href="http://onyekachi.me">Made in Lagos, Nigeria by Onyekachi.</a>
+    </div>
+  </div>
+</div>
+</body>

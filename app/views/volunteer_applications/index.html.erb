@@ -1,0 +1,37 @@
+<%= provide(:title, 'Dashboard') %>
+<body class="dashboard">
+<div class="header">
+  <div class="container">
+    <ul class="my-nav pull-left">
+      <li <% if params[:q] != 'accepted'  %>class="active"<% end %>><a href="/dashboard">Recent</a></li>
+      <li <% if params[:q] == 'accepted'  %>class="active"<% end %>><a href="?q=accepted">Accepted</a></li>
+    </ul>
+    <form class="navbar-form pull-right" role="search" action="/dashboard" method="get">
+      <input type="text" class="form-control-small" placeholder="Search" name="q">
+      <button type="submit" class="btn btn-default form-submit">Go</button>
+    </form>
+  </div>
+</div>
+<div class="content container">
+  <ul class="applications">
+     <% if not @volunteer_applications or @volunteer_applications.empty? %>
+          <h4 style="text-align: center; margin: 60px">No volunteers here.</h4>
+     <% else %>
+        <%= render @volunteer_applications %>
+     <% end %>
+  </ul>
+
+  <div class="row subtitle">
+    <ul class="pagination">
+      <% if @volunteer_applications %>
+        <%= paginate @volunteer_applications, :window => 2%>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<div class="footer">
+  <div class="container">
+    <a class="subtitle small" href="http://onyekachi.me">Made in Lagos, Nigeria by Onyekachi.</a>
+  </div>
+</div>
+</body>

@@ -1,0 +1,1 @@
+$("#<%= dom_id(@volunteer_application) %>").html("<%= escape_javascript( render partial: 'accept_revoke_form', locals: {volunteer_application: @volunteer_application })%>")

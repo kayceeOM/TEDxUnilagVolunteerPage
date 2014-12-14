@@ -1,0 +1,226 @@
+body{
+  font-family: 'Source Sans Pro';
+  font-size: 35px;
+  color: #111;
+  margin-bottom: 120px;
+}
+
+html{
+  position: relative;
+}
+
+a{
+  color: #dd0000;
+}
+
+a:hover{
+  color: #dd0000
+}
+
+
+.container{
+  max-width: 768px;
+}
+
+.btn-primary{
+  height: 64px;
+  width: 120px;
+  padding: 10px;
+  font-size: 0.8em;
+  margin-right: -10px;
+}
+
+.btn{
+  background-color: #ff2b06;
+  border: none;
+  color: #fff;
+}
+
+.btn:hover{
+  background-color: #dd0000;
+  border: none;
+  color: #fff;
+}
+
+.btn-success{
+  background-color: #777;
+  border: none;
+  color: #fff;
+}
+
+.btn-success:hover{
+  background-color: #555;
+  border: none;
+  color: #fff;
+}
+
+.header{
+  background: black;
+  padding: 20px;
+}
+
+
+.title{
+  margin: 54px auto;
+}
+h1{
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+.subtitle{
+  font-size: 0.6em;
+  color: #aaa;
+}
+
+.container{
+  text-align: center;
+  font-size: 40px;
+  width: 100%;
+}
+
+.narrow{
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.form-control, select{
+  height: 72px;
+  margin: 12px;
+  font-size: 0.8em;
+  width: 100%;
+  border:solid 1px #ddd;
+}
+
+select{
+  color: #777;
+  padding: 10px;
+}
+
+option:first-child{
+  color: #ddd;
+}
+
+
+.spaced{
+  margin: 96px auto;
+  padding: 20px;
+}
+
+.login{
+  background-color: #eee;
+}
+
+
+.spaced > .subtitle{
+  margin: 20px;
+}
+
+.dashboard > .header{
+  background-color: #fff;
+  height: 100px;
+  padding: 10px;
+
+  .container{
+    padding-bottom: 20px;
+  }
+
+  li{
+    font-size: 18px;
+    display: inline;
+    padding: 15px;
+  }
+
+  li:hover{
+    background-color: #ccc;
+  }
+
+  .active{ border-bottom: 3px solid #ff2b06; }
+
+  .my-nav{
+    margin-top: 10px;
+  }
+}
+
+
+.form-control-small{
+  height: 36px;
+  width: 210px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  padding: 10px;
+}
+
+.form-submit{
+  height: 36px;
+  margin-top: 8px;
+}
+
+.applications{
+  font-size: 18px;
+  text-align: left;
+  li{
+    list-style: none;
+  }
+}
+
+.application{
+  margin: 30px 0;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  border-left: 5px solid #ff2b06;
+  padding: 20px;
+  background-color: #fafafa;
+
+  .user-email, .user-department{ color: #777; }
+  .user-activity { color: #ff2b06; }
+  .user-reason{ color: #333; }
+
+  p{ margin: 10px 0; }
+}
+
+.subtitle > .pagination{
+  a{ color: #ff2b06; }
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  color: #ddd;
+
+  .small{
+    font-size: 16px;
+    padding-bottom: 30px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .narrow{ max-width: 480px; }
+
+  h1{ font-size: 36px; }
+
+  .subtitle{ font-size: 16px; }
+
+  .form-control, select{
+    height: 54px;
+    margin: 12px;
+    font-size: 24px;
+    width: 100%;
+    border:solid 1px #ddd;
+  }
+
+  .btn-primary{
+    height: 48px;
+    width: 120px;
+    font-size: 24px;
+    padding: 10px;
+  }
+
+}
