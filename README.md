@@ -1,1 +1,1 @@
-#This project is currently used to manage volunteer applications for TEDx Unilag.
+This project is currently used to manage volunteer applications for TEDx Unilag.
